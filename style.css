@@ -1,0 +1,686 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font: 62.5%/1.4 Microsoft YaHei, Verdana, Arial, Helvetica, sans-serif;
+    background: rgb(30, 30, 31);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 1.6em;
+}
+
+p, a, span {
+    font-size: 1.4em
+}
+
+a {
+    text-decoration: none;
+}
+
+/*网页顶部导航栏*/
+header {
+    width: 100%;
+    height: 50px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 999;
+}
+/*导航栏左侧图片*/
+header > img {
+    width: 95px;
+    height: 33px;
+    display: flex;
+}
+/*导航栏搜索框*/
+header > form {
+    display: flex;
+}
+/*当行蓝搜索框input样式*/
+.header-search {
+    margin-left: 50px;
+    display: flex;
+    height: 30px;
+    width: 300px;
+    border: solid 1px gainsboro;
+    background: rgb(242, 242, 245);
+    padding-left: 10px;
+}
+/*导航栏右侧链接列表*/
+.header-ul {
+    margin-left: 50px;
+    display: flex;
+}
+.header-ul li {
+    display: flex;
+    margin-right: 40px;
+}
+.header-ul li:last-child {
+    display: flex;
+    margin-right: 20px;
+}
+.header-ul li a {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+}
+.header-right {
+    display: flex;
+    background: url("images/header.png") no-repeat;
+    width: 155px;
+    height: 46px;
+}
+
+/*主页面*/
+.container {
+    display: block;
+    width: 1010px;
+    margin: 0 auto;
+    background: rgb(22, 22, 23);
+    position: relative;
+    top: 50px;
+    overflow: hidden;
+}
+
+/*左侧页面*/
+.left-side {
+    display: inline-block;
+    vertical-align: top;
+    width: 150px;
+    color: white;
+}
+/*中间部分*/
+.middle {
+    display: inline-block;
+    vertical-align: top;
+    width: 600px;
+    margin-right: 10px;
+}
+
+/*右侧页面*/
+.right-side {
+    display: inline-block;
+    vertical-align: top;
+    width: 230px;
+    margin-right: 10px;
+}
+
+/*左侧页面的列表*/
+ul[class^=list] {
+    border-bottom: solid 1px rgb(46, 46, 47);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+ul[class^=list] li {
+    list-style: none;
+    line-height: 2.5em;
+}
+ul[class^=list] li a {
+    padding-left: 15px;
+    color: white;
+}
+
+/*微博发送区块*/
+.send-weibo {
+    display: block;
+    box-sizing: border-box;
+    padding: 15px 10px 10px 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background: rgb(50, 50, 51);
+    height: 180px;
+}
+
+/*发送区块标题*/
+.title-area {
+    display: inline-block;
+    height: 21px;
+    width: 100%;
+}
+
+.title-area p {
+    display: inline-block;
+    position: relative;
+    top: 8px;
+    float: right;
+    font-size: 1em;
+    color: rgb(229, 97, 54);
+}
+
+.text-area img {
+    float: left;
+}
+
+/*发送区块的输入部分*/
+#text-area {
+    display: inline-block;
+    height: 68px;
+    width: 568px;
+    padding: 5px;
+    border: solid 1px black;
+    margin-top: 4px;
+    margin-bottom: 10px;
+    background: rgb(78, 78, 82);
+    word-wrap: normal;
+    color: white;
+}
+
+/*发送按钮*/
+.send-button {
+    float: right;
+    height: 28px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background: #ffc09f;
+    border: solid 1px coral;
+    border-radius: 2px;
+    color: white;
+    font-family: sans-serif;
+    font-weight: inherit;
+    font-size: 1.5em;
+}
+
+/*发送区块下方的按钮区域*/
+.button-area {
+    /*display: inline-block;*/
+    margin-top: 9px;
+    height: 35px;
+}
+
+.button-area ul {
+    display: block;
+}
+
+.button-area ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.button-area ul li a {
+    color: #c8c8cc;
+    font-size: 1em;
+}
+
+/*发送区块下方的微博分类按钮区块*/
+.classify {
+    height: 38px;
+    margin-bottom: 10px;
+    background: rgb(50, 50, 51);
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+.classify-content {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.classify ul {
+    position: relative;
+    padding-left: 10px;
+    display: inline-block;
+    /*bottom: 10px;*/
+
+}
+.classify ul li {
+    display: inline-block;
+    margin-right: 25px;
+}
+.classify ul li a {
+    text-decoration: none;
+    color: #c8c8cc;
+    font-size: 1em;
+}
+
+/*显示时间*/
+#display-time {
+    display: inline-block;
+    color: #c8c8cc;
+}
+
+/*显示日期*/
+#display-date {
+    display: inline-block;
+    color: #c8c8cc;
+}
+
+/*一条微博的内容*/
+.weibo {
+    display: block;
+    margin-bottom: 10px;
+    padding: 20px 20px 4px 20px;
+    background: rgb(50, 50, 51);
+}
+/*头像*/
+.weibo-avatar {
+    display: inline-block;
+    vertical-align: top;
+
+}
+.weibo-avatar img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.weibo-detail {
+    display: inline-block;
+    margin-left: 5px;
+    width: 500px;
+}
+/*用户名*/
+.weibo-info {
+    display: block;
+    height: 20px;
+    padding-top: 5px;
+    color: #c8c8cc;
+}
+/*微博发送时间*/
+.weibo-time {
+    display: block;
+    color: rgb(143, 145, 143);
+    font-size: 0.8em;
+    margin-bottom: 2px;
+}
+/*微博的文本*/
+.weibo-text {
+    color: rgb(200, 200, 204);
+    font-size: 1em;
+    word-wrap: normal;
+    margin-bottom: 10px;
+}
+/*微博图片区域*/
+.weibo-img-area {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 500px;
+}
+/*微博图片*/
+.weibo-img {
+    display: flex;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+.weibo-img img {
+    object-fit: cover;
+    width: 100px;
+
+}
+
+.weibo-button-area {
+    display: block;
+    border-top: solid 1px #c8c8cc;
+    margin-top: 5px;
+}
+
+.weibo-button-area ul {
+    display: block;
+    margin-left: 18px;
+}
+
+.weibo-button-area ul li {
+    display: inline-block;
+    padding: 10px 40px;
+    /*border-right: solid 1px #c8c8cc;*/
+
+}
+
+.weibo-button-area ul li:last-child {
+    display: inline-block;
+    padding-left: 40px;
+    padding-right: 40px;
+    border: 0;
+}
+
+.weibo-button-area ul li a {
+    color: #c8c8cc;
+    font-size: 1.2em;
+}
+
+/*右侧个人简介*/
+.profile {
+    display: block;
+    height: 180px;
+    background: rgb(50, 50, 51);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+/*个人简介封面*/
+.cover {
+    display: block;
+    height: 75px;
+    background: url("images/bike.jpg") no-repeat;
+    background-size: 230px 75px;
+    text-align: center;
+}
+.cover img {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-top: 35px;
+    border: solid 2px gainsboro;
+}
+
+/*个人简介的关注、粉丝、微博数和名称*/
+.profile-info {
+    display: block;
+    box-sizing: border-box;
+    height: 90px;
+    padding: 16px 16px 9px 16px;
+    background: rgb(50, 50, 51);
+}
+
+.name-box {
+    display: block;
+    text-align: center;
+}
+
+.name-box h6 {
+    margin-top: 10px;
+    color: #c8c8cc;
+}
+
+.user-attend {
+    display: block;
+    text-align: center;
+}
+
+.user-attend li {
+    color: #c8c8cc;
+    width: 33px;
+    display: inline-block;
+    border-right: solid 1px black;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.user-attend li:last-child {
+    width: 33px;
+    display: inline-block;
+    border-right: 0;
+}
+
+
+
+.left-title {
+    display: inline-block;
+    padding: 5px 10px;
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: solid 1px rgb(40, 40, 41);
+}
+
+.left-title h5 {
+    display: inline-block;
+    float: left;
+    color: #c8c8cc;
+    font-size: 1.5em;
+}
+
+.left-title a {
+    display: inline-block;
+    float: right;
+    color: #c8c8cc;
+}
+
+/*亚洲新歌榜*/
+.song {
+    display: block;
+    /*height: 200px;*/
+    margin-bottom: 10px;
+    background: rgb(50, 50, 51);
+}
+.song ul {
+    display: block;
+}
+.song ul li {
+    display: block;
+    padding: 10px;
+    border-bottom: solid 1px rgb(40, 40, 41);
+}
+
+.song ul li > a {
+    display: inline-block;
+    width: 100%;
+}
+
+.song ul li > a p {
+    display: inline-block;
+    float: left;
+    color: #c8c8cc;
+    font-size: 1em;
+}
+
+.song ul li > a i {
+    display: inline-block;
+    float: right;
+    color: #c8c8cc;
+    font-size: 1.5em;
+}
+
+.song-hide {
+    display: none;
+    padding: 5px;
+}
+.song-hide img {
+    display: inline-block;
+    height: 72px;
+    width: 72px;
+    margin-right: 5px;
+    vertical-align: top;
+}
+.song-hide-right {
+    display: inline-block;
+    padding: 10px;
+    float: right;
+    width: 100px;
+}
+
+.song-hide-title {
+    display: inline-block;
+    color: #c8c8cc;
+    font-size: 1.5em;
+}
+.song-hide-singer {
+    display: inline-block;
+    color: rgb(153, 153, 153);
+    font-size: 0.8em;
+    width: 100px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.song-hide-score {
+    display: inline-block;
+    color: rgb(153, 153, 153);
+    font-size: 0.8em;
+}
+.rank {
+    display: inline-block;
+    /*float: left;*/
+    width: 17px;
+    height: 17px;
+    margin: 2px;
+    border: solid 1px #963;
+    border-radius: 15px;
+    background-color: #6F605A;
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    font-size: 12px;
+    padding: 0;
+}
+
+.song ul > li:hover .song-hide {
+    display: inline-block;
+}
+
+/*热门话题*/
+.topic {
+    display: block;
+    margin-bottom: 10px;
+    background: rgb(50, 50, 51);
+}
+.topic-list {
+    display: inline-block;
+    /*padding: 10px;*/
+    box-sizing: border-box;
+    width: 100%;
+}
+.topic-list li {
+    margin-bottom: 15px;
+    list-style: none;
+    padding: 5px 10px;
+}
+.topic-title {
+    color: #c8c8cc;
+    font-size: 0.8em;
+    float: left;
+}
+.topic-number {
+    color: rgb(153, 153, 153);
+    font-size: 0.8em;
+    float: right;
+}
+
+/*轮播*/
+.adv {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    background: rgb(50, 50, 51);
+}
+.adv-area {
+    padding: 10px;
+    text-align: center;
+}
+.adv-img {
+    display: inline-block;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+.adv-img img {
+    object-fit: cover;
+}
+.adv-button {
+    display: inline-block;
+    padding: 5px;
+}
+.adv-button a {
+    display: block;
+    float: left;
+    width: 17px;
+    height: 17px;
+    margin: 2px;
+    border: solid 1px #963;
+    border-radius: 15px;
+    background-color: #6F605A;
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    font-size: 12px;
+    padding: 0;
+}
+.adv-button a {
+    background-color: #C93;
+}
+
+/*微博底部*/
+    /*height: 400px;*/
+footer {
+    width: 100%;
+    position: relative;
+    top: 50px;
+}
+
+/*底部上方*/
+.bottom-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.bottom-top-area {
+    padding: 15px;
+}
+
+.bottom-top-title {
+    display: flex;
+    width: 100%;
+    height: 2em;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.bottom-top-title > h5 {
+    color: rgb(200, 200, 204);
+}
+
+.bottom-top-list {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    margin-right: 15px;
+}
+
+.bottom-top-list ul {
+    display: flex;
+    width: 50px;
+    flex-direction: column;
+    margin-right: 20px;
+    justify-content: flex-start;
+}
+
+.bottom-top-list ul li {
+    display: flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+.bottom-top-list ul li a {
+    display: flex;
+    color: #c8c8cc;
+    font-size: 0.8em;
+}
+
+.bottom-bottom {
+    display: flex;
+    height: 100px;
+    width: 100%;
+    background: rgb(35, 35, 36);
+    flex-direction: row;
+    justify-content: center;
+}
+
+.bottom-bottom ul {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.bottom-bottom ul li {
+    display: inline-block;
+    list-style: none;
+    padding: 5px 10px;
+}
+
+.bottom-bottom ul li a {
+    display: inline-block;
+    color: #c8c8cc;
+    font-size: 0.6em;
+}
